@@ -1,0 +1,4 @@
+redis-cluster/
+.idea/
+.vscode/
+*.log

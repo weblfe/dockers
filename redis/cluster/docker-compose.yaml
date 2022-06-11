@@ -1,0 +1,105 @@
+version: '3.7'
+
+services:
+
+  redis8001:
+    image: 'redis'
+    restart: always
+    container_name: redis8001
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8001/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8001/data:/data
+    ports:
+      - "8001:8001"
+      - "18001:18001"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
+
+  redis8002:
+    image: 'redis'
+    restart: always
+    container_name: redis8002
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8002/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8002/data:/data
+    ports:
+      - "8002:8002"
+      - "18002:18002"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
+
+  redis8003:
+    image: 'redis'
+    restart: always
+    container_name: redis8003
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8003/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8003/data:/data
+    ports:
+      - "8003:8003"
+      - "18003:18003"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
+
+  redis8004:
+    image: 'redis'
+    restart: always
+    container_name: redis8004
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8004/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8004/data:/data
+    ports:
+      - "8004:8004"
+      - "18004:18004"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
+
+  redis8005:
+    image: 'redis'
+    restart: always
+    container_name: redis8005
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8005/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8005/data:/data
+    ports:
+      - "8005:8005"
+      - "18005:18005"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
+  
+  redis8006:
+    image: 'redis'
+    restart: always
+    container_name: redis8006
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./redis-cluster/8006/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis-cluster/8006/data:/data
+    ports:
+      - "8006:8006"
+      - "18006:18006"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+    privileged: true
